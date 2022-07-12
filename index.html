@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DRUMPSET</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <style>
+      .hide-spinner {
+        opacity: 0;
+        z-index: -1000000;
+        display: none;
+        animation: none;
+      }
+      .spinner-container {
+        height: 15rem;
+        width: 15rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .spinner-lines {
+        height: 100%;
+        width: 100%;
+        position: relative;
+      }
+
+      .line {
+        border-radius: 100px;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform-origin: 7.5rem;
+        height: 1rem;
+        width: 5rem;
+        background-color: #fff;
+        animation: highlight linear infinite;
+        animation-duration: 1000ms;
+      }
+      @keyframes highlight {
+        0% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+
+      .rotate-0deg {
+        transform: translate(0, -50%) rotate(0deg);
+        animation-delay: -1100ms;
+      }
+      .rotate-30deg {
+        transform: translate(0, -50%) rotate(30deg);
+        animation-delay: -1000ms;
+      }
+      .rotate-60deg {
+        transform: translate(0, -50%) rotate(60deg);
+        animation-delay: -900ms;
+      }
+      .rotate-90deg {
+        transform: translate(0, -50%) rotate(90deg);
+        animation-delay: -800ms;
+      }
+      .rotate-120deg {
+        transform: translate(0, -50%) rotate(120deg);
+        animation-delay: -700ms;
+      }
+      .rotate-150deg {
+        transform: translate(0, -50%) rotate(150deg);
+        animation-delay: -600ms;
+      }
+      .rotate-180deg {
+        transform: translate(0, -50%) rotate(180deg);
+        animation-delay: -500ms;
+      }
+      .rotate-210deg {
+        transform: translate(0, -50%) rotate(210deg);
+        animation-delay: -400ms;
+      }
+      .rotate-240deg {
+        transform: translate(0, -50%) rotate(240deg);
+        animation-delay: -300ms;
+      }
+      .rotate-270deg {
+        transform: translate(0, -50%) rotate(270deg);
+        animation-delay: -200ms;
+      }
+      .rotate-300deg {
+        transform: translate(0, -50%) rotate(300deg);
+        animation-delay: -100ms;
+      }
+      .rotate-330deg {
+        transform: translate(0, -50%) rotate(330deg);
+        animation-delay: 0ms;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="sounds">
+      <audio data-key="65" class="audio" src="./sounds/boom.wav"></audio>
+      <audio data-key="83" class="audio" src="./sounds/clap.wav"></audio>
+      <audio data-key="68" class="audio" src="./sounds/hihat.wav"></audio>
+      <audio data-key="70" class="audio" src="./sounds/kick.wav"></audio>
+      <audio data-key="71" class="audio" src="./sounds/openhat.wav"></audio>
+      <audio data-key="72" class="audio" src="./sounds/ride.wav"></audio>
+      <audio data-key="74" class="audio" src="./sounds/snare.wav"></audio>
+      <audio data-key="75" class="audio" src="./sounds/tink.wav"></audio>
+      <audio data-key="76" class="audio" src="./sounds/tom.wav"></audio>
+    </div>
+    <div class="container">
+      <div class="spinner-container">
+        <div class="spinner-lines">
+          <div class="rotate-0deg line"></div>
+          <div class="rotate-30deg line"></div>
+          <div class="rotate-60deg line"></div>
+          <div class="rotate-90deg line"></div>
+          <div class="rotate-120deg line"></div>
+          <div class="rotate-150deg line"></div>
+          <div class="rotate-180deg line"></div>
+          <div class="rotate-210deg line"></div>
+          <div class="rotate-240deg line"></div>
+          <div class="rotate-270deg line"></div>
+          <div class="rotate-300deg line"></div>
+          <div class="rotate-330deg line"></div>
+        </div>
+      </div>
+      <h1>Please refresh If it won't work</h1>
+
+      <div class="buttons">
+        <!-- <button data-key="65" class="button a ">
+        <kbd>a</kbd><span>clap</span>
+      </button>
+      <button data-key="83" class="button s">
+        <kbd>s</kbd><span>hihat</span>
+      </button>
+      <button data-key="68" class="button d">
+        <kbd>d</kbd><span>kick</span>
+      </button>
+      <button data-key="70" class="button f">
+        <kbd>f</kbd><span>openhat</span>
+      </button>
+      <button data-key="71" class="button g">
+        <kbd>g</kbd><span>boom</span>
+      </button>
+      <button data-key="72" class="button h">
+        <kbd>h</kbd><span>ride</span>
+      </button>
+      <button data-key="74" class="button j">
+        <kbd>j</kbd><span>snare</span>
+      </button>
+      <button data-key="75" class="button k">
+        <kbd>k</kbd><span>tom</span>
+      </button>
+      <button data-key="76" class="button l">
+        <kbd>l</kbd><span>tink</span>
+      </button> -->
+      </div>
+    </div>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
